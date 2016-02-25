@@ -1,7 +1,10 @@
 'use strict';
 
+// baseURL is the JSON server URI. It should be 'http://localhost:3000/' 
+// when running locally.
+
 angular.module('conFusion.services', ['ngResource'])
-        .constant("baseURL", "https://json-server-smathx.c9users.io/")
+        .constant("baseURL", "https://fswd4-mobile-smathx.c9users.io:8081/")
         .service('menuFactory', ['$resource', 'baseURL', function($resource,baseURL) {
     
             var promotions = [

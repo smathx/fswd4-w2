@@ -22,7 +22,11 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers','conFusion.service
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+  
+  // Fix scroll bar visibility problem on Android by using JS scrolling.
+  $ionicConfigProvider.scrolling.jsScrolling(true);
+  
   $stateProvider
 
   .state('app', {
